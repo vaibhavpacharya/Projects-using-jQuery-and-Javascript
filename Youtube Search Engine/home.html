@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Youtube Search Engine</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js\script.js"></script>
+  <script type="text/javascript" src="js\jquery.fancybox.min.js"></script>
+
+  <link rel="stylesheet" href="css\style.css">
+  <link rel="stylesheet" href="css\jquery.fancybox.min.css">
+  <script>
+    $(document).ready(function(){
+      $(".fancybox").fancybox();
+      $('[data-fancybox="video"]').fancybox({
+        type: 'iframe',
+        iframe: {
+          css:{
+            width: '600px'
+          }
+        }
+      })
+      });
+  </script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Search <span>Vidz</span></h1>
+      <p>Search Youtube Videos </p>
+    </header>
+
+    <section>
+      <form id="search-form" name="search-form" onsubmit="return search()">
+        <div class="fieldcontainer">
+          <input type="search" id="query" class="search-field" placeholder="Search Youtube Vidz...">
+          <button type="submit" name="search-btn" id="search-btn" value="">
+            <i class="fa fa-search fa-2x"></i>
+          </button>
+        </div>
+      </form>
+      <ul id="results"></ul>
+      <div id="buttons"></div>
+  </section>
+  <footer>
+    <p>Copyright 2017</p>
+  </footer>
+</div>
+</body>
+</html>
